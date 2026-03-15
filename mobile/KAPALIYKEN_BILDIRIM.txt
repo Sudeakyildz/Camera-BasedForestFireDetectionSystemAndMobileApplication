@@ -1,0 +1,36 @@
+============================================
+  UYGULAMA KAPALIYKEN BILDIRIM ICIN ZORUNLU
+============================================
+
+Expo push'in kapali uygulamada calismasi icin EAS (Expo) proje kimligi
+(projectId) gerekiyor. Su an app.json icinde "extra.eas.projectId" bos;
+bu yuzden kapaliyken bildirim gelmeyebilir.
+
+ADIMLAR (bir kez yap, sonra APK yeniden olustur):
+
+1) https://expo.dev adresine git, ucretsiz hesap ac / giris yap.
+
+2) "Create a project" veya "Add project" ile yeni proje olustur
+   (veya mevcut projeyi kullan). Proje adi: ornek "yangin-tespit".
+
+3) Proje sayfasinda veya ayarlarda "Project ID" (UUID gibi:
+   ornek a1b2c3d4-e5f6-7890-abcd-ef1234567890) kopyala.
+
+4) mobile/app.json dosyasini ac. "extra" -> "eas" -> "projectId"
+   alanini bul; su an "" (bos). Buraya kopyaladigin Project ID'yi
+   yapisitir. Ornek:
+   "extra": { "eas": { "projectId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890" } }
+
+5) APK'yi yeniden olustur:
+   cd mobile
+   apk-gradle-olustur.bat
+
+6) Yeni APK'yi telefona kur. Uygulamayi en az bir kez ac; Ayarlar'da
+   sunucu IP'sini dogru gir (bilgisayarin IP'si, ornek 192.168.1.10:8000).
+   Birkaç saniye bekleyince token sunucuya gider.
+
+7) Bilgisayarda YOLO'yu calistir (python local_inference.py --server).
+   Kamera yangin tespit ettiginde uygulama kapali olsa bile telefona
+   bildirim gitmeli.
+
+Ozet: app.json -> extra.eas.projectId doldur -> APK yeniden olustur.

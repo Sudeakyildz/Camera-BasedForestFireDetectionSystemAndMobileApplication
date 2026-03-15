@@ -1,0 +1,8 @@
+*.apk
+*.h5
+*.pt
+*.pth
+*.weights
+BitirmeEkranGörüntüleri/
+MASKRCNN/
+YOLO/

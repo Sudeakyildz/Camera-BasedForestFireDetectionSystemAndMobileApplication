@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583927402793",
+    "project_id": "sudeapp-528e6",
+    "storage_bucket": "sudeapp-528e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583927402793:android:9f4630321a4600bc45e738",
+        "android_client_info": {
+          "package_name": "com.anonymous.firedetectionmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNQZKLstS7pFHfTHRLGUQFAxG-h85xPHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
